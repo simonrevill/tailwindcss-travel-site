@@ -9,7 +9,7 @@ const App = () => {
   return (
     <>
       <header className="bg-blue-900 p-4">
-        <div className="mx-auto flex max-w-[992px] flex-col gap-4">
+        <div className="mx-auto flex max-w-[62rem] flex-col gap-4">
           <div className="flex items-center justify-between">
             <a href="/" className="text-xl font-bold text-white">
               Booking.com
