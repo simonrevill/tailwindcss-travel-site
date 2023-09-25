@@ -3,10 +3,11 @@ import { MdMenu, MdClose, MdOutlineHelpOutline } from "react-icons/md";
 import { BiUser } from "react-icons/bi";
 import { gb } from "../assets/images";
 import { navItems } from "../constants";
+import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
-  const [activeNavItem, setActiveNavItem] = useState("Stays");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <header className="bg-blue-900 p-4">
@@ -23,13 +24,13 @@ const Navigation = () => {
                   : "hidden"
               }`}
             >
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="text-sm font-bold text-white max-lg:text-black"
               >
                 GBP
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/">
                 <img
                   src={gb}
                   alt="Language - English"
@@ -37,29 +38,29 @@ const Navigation = () => {
                   width={24}
                   height={24}
                 />
-              </a>
-              <a
-                href="/"
+              </Link>
+              <Link
+                to="/"
                 aria-label="Help"
                 className="text-white max-lg:text-black"
               >
                 <MdOutlineHelpOutline size="1.5rem" />
-              </a>
-              <a
-                href="/"
+              </Link>
+              <Link
+                to="/"
                 className="text-sm font-bold text-white max-lg:text-black"
               >
                 List your property
-              </a>
+              </Link>
             </div>
             <div className="flex gap-2">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="rounded-full border p-1 text-white md:hidden"
                 aria-label="Your profile"
               >
                 <BiUser size="1.25rem" />
-              </a>
+              </Link>
               <button
                 type="button"
                 className="hidden min-w-[4.375rem] rounded-sm border border-blue-400 bg-white p-1.5 text-sm font-semibold text-blue-600 hover:bg-blue-50 md:block"
@@ -87,17 +88,17 @@ const Navigation = () => {
         </div>
         <nav>
           <ul className="no-scrollbar flex gap-2 overflow-auto text-sm text-white">
-            {navItems.map(({ label, icon: Icon }) => (
-              <li
-                key={label}
-                className={`flex cursor-pointer items-center gap-2 whitespace-nowrap rounded-full border border-transparent px-4 py-2 text-xs hover:border-white ${
-                  activeNavItem === label ? "border-white bg-blue-800" : ""
-                }`}
-                onClick={() => setActiveNavItem(label)}
-              >
-                <Icon size="1.25rem" />
-                {label}
-              </li>
+            {navItems.map(({ label, link, icon: Icon }) => (
+              <Link to={link} key={label}>
+                <li
+                  className={`flex cursor-pointer items-center gap-2 whitespace-nowrap rounded-full border border-transparent px-4 py-2 text-xs hover:border-white ${
+                    location.pathname === link ? "border-white bg-blue-800" : ""
+                  }`}
+                >
+                  <Icon size="1.25rem" />
+                  {label}
+                </li>
+              </Link>
             ))}
           </ul>
         </nav>

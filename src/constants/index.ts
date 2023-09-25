@@ -8,26 +8,32 @@ import { BiSolidTaxi } from "react-icons/bi";
 export const navItems = [
   {
     label: "Stays",
+    link: "/",
     icon: LiaBedSolid,
   },
   {
     label: "Flights",
+    link: "/flights",
     icon: MdOutlineFlightTakeoff,
   },
   {
     label: "Flight + Hotel",
+    link: "/flight-and-hotel",
     icon: PiSuitcaseBold,
   },
   {
     label: "Car rentals",
+    link: "/car-rentals",
     icon: PiCarProfile,
   },
   {
     label: "Attractions",
+    link: "/attractions",
     icon: MdAttractions,
   },
   {
     label: "Airport taxis",
+    link: "/airport-taxis",
     icon: BiSolidTaxi,
   },
 ];
