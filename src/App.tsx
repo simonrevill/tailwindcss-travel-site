@@ -39,7 +39,11 @@ const App = () => {
                     height={24}
                   />
                 </a>
-                <a href="/" className="text-white max-lg:text-black">
+                <a
+                  href="/"
+                  aria-label="Help"
+                  className="text-white max-lg:text-black"
+                >
                   <MdOutlineHelpOutline size="1.5rem" />
                 </a>
                 <a
@@ -53,18 +57,19 @@ const App = () => {
                 <a
                   href="/"
                   className="rounded-full border p-1 text-white md:hidden"
+                  aria-label="Your profile"
                 >
                   <BiUser size="1.25rem" />
                 </a>
                 <button
                   type="button"
-                  className="hidden min-w-[4.375rem] rounded-sm border border-blue-400 bg-white p-1.5 text-sm font-semibold text-blue-500 hover:bg-blue-50 md:block"
+                  className="hidden min-w-[4.375rem] rounded-sm border border-blue-400 bg-white p-1.5 text-sm font-semibold text-blue-600 hover:bg-blue-50 md:block"
                 >
                   Register
                 </button>
                 <button
                   type="button"
-                  className="hidden min-w-[4.375rem] rounded-sm border border-blue-400 bg-white p-1.5 text-sm font-semibold text-blue-500 hover:bg-blue-50 md:block"
+                  className="hidden min-w-[4.375rem] rounded-sm border border-blue-400 bg-white p-1.5 text-sm font-semibold text-blue-600 hover:bg-blue-50 md:block"
                 >
                   Sign in
                 </button>
