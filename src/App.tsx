@@ -36,13 +36,13 @@ const App = () => {
               <div className="flex gap-2">
                 <button
                   type="button"
-                  className="min-w-[4.375rem] border border-blue-400 bg-white p-1.5 text-sm font-semibold text-blue-500 hover:bg-blue-50"
+                  className="min-w-[4.375rem] rounded-sm border border-blue-400 bg-white p-1.5 text-sm font-semibold text-blue-500 hover:bg-blue-50"
                 >
                   Register
                 </button>
                 <button
                   type="button"
-                  className="min-w-[4.375rem] border border-blue-400 bg-white p-1.5 text-sm font-semibold text-blue-500 hover:bg-blue-50"
+                  className="min-w-[4.375rem] rounded-sm border border-blue-400 bg-white p-1.5 text-sm font-semibold text-blue-500 hover:bg-blue-50"
                 >
                   Sign in
                 </button>
