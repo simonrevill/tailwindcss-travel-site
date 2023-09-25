@@ -50,7 +50,7 @@ const App = () => {
             </div>
           </div>
           <nav>
-            <ul className="no-scrollbar flex gap-6 overflow-auto text-sm text-white">
+            <ul className="no-scrollbar flex gap-2 overflow-auto text-sm text-white">
               {navItems.map(({ label, icon: Icon }) => (
                 <li
                   key={label}
